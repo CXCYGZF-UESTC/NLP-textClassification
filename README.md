@@ -15,7 +15,11 @@ Chinese exam questions of high school.
 * 1354263077  　  21   　 字音　    下列词语中加点的字,读音全都正确的一组是( ) A.尴 尬(ɡà) 口 讷(nà) 髭须(xī) 朔风(shuò) B.拾 掇(duo) 央 浼(měi) 规 矩(jù) 祈祷(qí) C.妥 当(dànɡ) 憎恶(zēnɡ) 滑 稽(jī) 吼 啸(xiào) D. 赍发(jī) 盘 缠(chan) 玷辱(diàn) 胭 脂(zhǐ)
 * 1354307841  　  21 　   古诗词阅读　    阅读下面这首词,然后回答问题. 望江怨 送别 [清]万树 春江渺,断送扁舟过林杪①.愁云清未了,布帆遥比沙鸥小.恨残照,犹有一竿红.怪人催去早. [注]①杪:树梢. (1)这首词的前四句描写了怎样的送别场景? (2)怎样理解“怪人催去早“?请结合全词分析.
 
-## evaluation:
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    * *`1354263077` is ID of the question.* </br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    * *`21` is the ID of the dataset, so you can ignore it if you don't want to try different datasets.* </br>
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    * *`字音` is one of the classes.*
+
+## Evaluation:
 ```ruby
 def count_precision_recall_at_k(y_pred, y_true, k):
     """
@@ -36,7 +40,7 @@ def count_precision_recall_at_k(y_pred, y_true, k):
     return pre/len(y_true), rec/len(y_true)
 ```
 
-## baseline:
+## Baseline:
 
 baseline   | pre_1 | rec_1 | pre_2 | rec_2 | pre_3 | rec_3
 -----------| ------|-------|-------|-------|-------|------
