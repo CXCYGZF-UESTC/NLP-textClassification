@@ -19,6 +19,10 @@ Chinese exam questions of high school.
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    * *`21` is the ID of the dataset, so you can ignore it if you don't want to try different datasets.* </br>
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    * *`字音` is one of the classes.*
 
+
+## Train-test split:
+In order to unify the standard, we use the questions whose ID end with 9 as the test set and the rest as the train set.
+
 ## Evaluation:
 ```ruby
 def count_precision_recall_at_k(y_pred, y_true, k):
