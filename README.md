@@ -1,18 +1,48 @@
-# NLP-textClassification
-Project: Classify Kaggle Consumer Finance Complaints.
-Highlights:
-This is a multi-class text classification (sentence classification) problem.
-The purpose of this project is to classify Kaggle Consumer Finance Complaints into 11 classes.
-The model was built with Convolutional Neural Network (CNN) and Word Embeddings on Tensorflow.
+# Text Classification for High School Exam Questions
+---
 
-Data: Kaggle Consumer Finance Complaints
+## Highlights:
+1. This is a multi-class text classification (sentence classification) problem.
+2. The purpose of this project is to classify High School Exam Questions into some classes and the number of classes is related to the data set.
 
-Input: consumer_complaint_narrative
+## demands:
+1. You can solve this problem with a variety of machine learning algorithms.
+2. The evaluation method is mainly based on precision and recall.
 
-Example: "someone in north Carolina has stolen my identity information and has purchased items including XXXX cell phones thru XXXX on XXXX/XXXX/2015. A police report was filed as soon as I found out about it on XXXX/XXXX/2015. A investigation from XXXX is under way thru there fraud department and our local police department.\n"
-Output: product
 
-Example: Credit reporting
-Reference:
+> ## Data:
+> Chinese exam questions of high school.
+> 
+> ### Example:
+> * 1354263077  　  21   　 字音　    下列词语中加点的字,读音全都正确的一组是( ) A.尴 尬(ɡà) 口 讷(nà) 髭须(xī) 朔风(shuò) B.拾 掇(duo) 央 浼(měi) 规 矩(jù) 祈祷(qí) C.妥 当(dànɡ) 憎恶(zēnɡ) 滑 稽(jī) 吼 啸(xiào) D. 赍发(jī) 盘 缠(chan) 玷辱(diàn) 胭 脂(zhǐ)
+> * 1354307841  　  21 　   古诗词阅读　    阅读下面这首词,然后回答问题. 望江怨 送别 [清]万树 春江渺,断送扁舟过林杪①.愁云清未了,布帆遥比沙鸥小.恨残照,犹有一竿红.怪人催去早. [注]①杪:树梢. (1)这首词的前四句描写了怎样的送别场景? (2)怎样理解“怪人催去早“?请结合全词分析.
 
-Implement a cnn for text classification in tensorflow
+## evaluation:
+```ruby
+def count_precision_recall_at_k(y_pred, y_true, k):
+    """
+    y_pred: [[ 1.3315865   0.71527897 -1.54540029 -0.00838385  0.62133597 -0.72008556]]
+    y_true: [[0 0 1 1 0 0]
+    """
+    y_indices = y_pred.argsort()[:, -k:][:, ::-1]
+    pre = 0.0
+    rec = 0.0
+    for i in range(len(y_true)):
+        intersec_true = 0
+        for j in y_indices[i]:
+            intersec_true += y_true[i][j]
+        true_total_count = np.count_nonzero(y_true[i] == 1)
+        pred_total_count = len(y_indices[i])
+        pre += intersec_true*1.0/pred_total_count
+        rec += intersec_true*1.0/true_total_count
+    return pre/len(y_true), rec/len(y_true)
+```
+
+
+
+## Reference:
+[Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882)</br>
+[A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)</br>
+[Very Deep Convolutional Networks for Text Classification](https://arxiv.org/abs/1606.01781)</br>
+[Hierarchical Attention Networks for Document Classification](http://www.aclweb.org/anthology/N16-1174)
+
