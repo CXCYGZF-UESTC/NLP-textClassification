@@ -1,12 +1,12 @@
 # Text Classification for High School Exam Questions
 ---
 ## Highlights:
-1. This is a multi-class text classification (sentence classification) problem.
-2. The purpose of this project is to classify High School Exam Questions into some classes and the number of classes is related to the data set.
+1. This is a **multi-class text classification (document classification)** problem.
+2. The purpose of this project is to classify High School Exam Questions into some classes and **the number of classes is related to the data set**.
 
 ## demands:
-1. You can solve this problem with a variety of machine learning algorithms.
-2. The evaluation method is mainly based on precision and recall.
+1. You can solve this problem with a variety of **machine learning** algorithms.
+2. The evaluation method is mainly based on **precision and recall**.
 
 
 ## Data:
@@ -36,9 +36,17 @@ def count_precision_recall_at_k(y_pred, y_true, k):
     return pre/len(y_true), rec/len(y_true)
 ```
 
+## baseline:
 
+baseline   | pre_1 | rec_1 | pre_2 | rec_2 | pre_3 | rec_3
+-----------| ------|-------|-------|-------|-------|------
+baseline_1 | 81.05 | 76.59 | 48.63 | 88.69 | 33.77 | 92.35
+baseline_2 | 85.27 | 80.84 | 49.31 | 90.40 | 33.73 | 92.67
+
+*These baseline are the results of two different algorithms.*
 
 ## Reference:
+[Character-level Convolutional Networks for Text Classification](https://arxiv.org/abs/1509.01626)</br>
 [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882)</br>
 [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)</br>
 [Very Deep Convolutional Networks for Text Classification](https://arxiv.org/abs/1606.01781)</br>
