@@ -1,6 +1,5 @@
 # Text Classification for High School Exam Questions
 ---
-
 ## Highlights:
 1. This is a multi-class text classification (sentence classification) problem.
 2. The purpose of this project is to classify High School Exam Questions into some classes and the number of classes is related to the data set.
