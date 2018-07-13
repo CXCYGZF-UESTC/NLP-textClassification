@@ -1,4 +1,4 @@
-# *Text Classification for High School Exam Questions*
+# **Text Classification for High School Exam Questions**
 
 ## Highlights:
 1. This is a **multi-class text classification (document classification)** problem.
