@@ -51,7 +51,7 @@ baseline   | pre_1 | rec_1 | pre_2 | rec_2 | pre_3 | rec_3
 baseline_1 | 81.05 | 76.59 | 48.63 | 88.69 | 33.77 | 92.35
 baseline_2 | 85.27 | 80.84 | 49.31 | 90.40 | 33.73 | 92.67
 
-*These baseline are the results of two different algorithms.*
+*These baselines are the results of two different algorithms.*
 
 ## Reference:
 [Character-level Convolutional Networks for Text Classification](https://arxiv.org/abs/1509.01626)</br>
